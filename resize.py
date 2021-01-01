@@ -20,8 +20,7 @@ def resize(img,filename, target_width, target_height):
 	image_resize = im.resize((resize_width, resize_height), Image.ANTIALIAS)
 	background = Image.new('RGB', (target_width, target_height), (255, 255, 255, 255))
 	offset = (round((target_width - resize_width) / 2), round((target_height - resize_height) / 2))
-	background.paste(image_resize, offset)
-	
+	background.paste(image_resize, offset)	
 	background.save(directory2 + filename, 'JPEG', quality=90)
 
 
